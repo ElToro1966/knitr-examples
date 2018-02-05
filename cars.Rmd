@@ -23,10 +23,10 @@ mtcars_subset
 
 Graphics can easily be included in the report. Using the base barplot function: 
 
-```{r bar_chart_mtcars, fig.cap = "Figure 1: MPG for cars with more that 6 cylinders", fig.width=10, fig.height=4}
-par(mar=c(10,4,1,1),las=3)
+```{r bar_chart_mtcars, fig.cap = "Figure 1: MPG for cars with more that 6 cylinders", fig.width=10, fig.height=8}
+par(mar=c(9,4,0,0),las=2)
 barplot(mtcars_subset$mpg, names.arg=row.names(mtcars_subset),
      col=rainbow(15), ylab = "Miles per gallon", 
-     ylim = c(0,max(mtcars_subset$mpg)))
+     ylim = c(0,1.25*max(mtcars_subset$mpg)))
 ```
 

@@ -45,10 +45,10 @@ Graphics can easily be included in the report. Using the base barplot function:
 
 
 ```r
-par(mar=c(10,4,1,1),las=3)
+par(mar=c(9,4,0,0),las=2)
 barplot(mtcars_subset$mpg, names.arg=row.names(mtcars_subset),
      col=rainbow(15), ylab = "Miles per gallon", 
-     ylim = c(0,max(mtcars_subset$mpg)))
+     ylim = c(0,1.25*max(mtcars_subset$mpg)))
 ```
 
 ![Figure 1: MPG for cars with more that 6 cylinders](figure/bar_chart_mtcars-1.png)
