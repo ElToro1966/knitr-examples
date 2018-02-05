@@ -1,0 +1,32 @@
+# Data From MT-Cars
+
+Example of literate programming with the MT-cars data. Above we have added a title with markdown, here we are adding som text, and below there is a horizontal line.
+
+***
+
+## Introduction
+
+Above there is a subtitle. Next, we will add an R code chunk. In order to get and process the data, we need the following libraries:
+```{r get_libraries}
+library(dplyr)
+```
+This code chunk loads the dply library.
+
+## Data Processing
+
+Let's do some work with the MT-cars data and display the result. First, we subset the data to only include cars with more than 6 cylinders, and then we display the result.
+```{r subsetting_data}
+mtcars_subset <- subset(mtcars, mtcars$cyl > 6)
+mtcars_subset
+```
+## Graphics
+
+Graphics can easily be included in the report. Using the base barplot function: 
+
+```{r bar_chart_mtcars, fig.cap = "Figure 1: MPG for cars with more that 6 cylinders", fig.width=10, fig.height=4}
+par(mar=c(10,4,1,1),las=3)
+barplot(mtcars_subset$mpg, names.arg=row.names(mtcars_subset),
+     col=rainbow(15), ylab = "Miles per gallon", 
+     ylim = c(0,max(mtcars_subset$mpg)))
+```
+
