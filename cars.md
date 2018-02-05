@@ -11,23 +11,6 @@ Above there is a subtitle. Next, we will add an R code chunk. In order to get an
 ```r
 library(dplyr)
 ```
-
-```
-## 
-## Attaching package: 'dplyr'
-```
-
-```
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-```
 This code chunk loads the dply library.
 
 ## Data Processing
